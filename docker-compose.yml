@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  api:
+    env_file:
+      - ./.env.${ENVIRONMENT}
+    build:
+      context: .
+      args:
+        KEY_VAULT_NAME: ${KEY_VAULT_NAME}
+        AZURE_TENANT_ID: ${AZURE_TENANT_ID}
+        AZURE_CLIENT_ID: ${AZURE_CLIENT_ID}
+        AZURE_CLIENT_SECRET: ${AZURE_CLIENT_SECRET}
+        DB_CONNECTION_STRING: ${DB_CONNECTION_STRING}
+        AZURE_OPENAI_API_VERSION: ${AZURE_OPENAI_API_VERSION}
+        AZURE_OPENAI_ENDPOINT: ${AZURE_OPENAI_ENDPOINT}
+        AZURE_OPENAI_MODEL_NAME: ${AZURE_OPENAI_MODEL_NAME}
+        PACKAGE_USER: ${PACKAGE_USER}
+        PACKAGE_TOKEN: ${PACKAGE_TOKEN}
+    image: ${IMAGE_NAME}
+    ports:
+      - "80:8081"

@@ -1,0 +1,12 @@
+[project]
+name = "oeri-chat-api"
+version = "0.1.0"
+description = "A Chat app for generating metric and action item based on user natural language text input"
+authors = ["Ramkumar Kommuju <ramkumarkommoju@chevron.com>"]
+readme = "README.md"
+requires-python = "^3.12"
+dependencies = [
+]
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

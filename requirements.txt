@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+pyodbc
+pandas
+matplotlib
+azure-identity
+openai
+sqlalchemy
+python-dotenv
+jinja2
+seaborn
+plotly
